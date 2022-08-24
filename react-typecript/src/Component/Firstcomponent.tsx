@@ -5,14 +5,14 @@
 import * as React from 'react';
 
 export interface IAppProps {
+  name:String
 
 }
-
-export function Firstcomponent () {
+export function Firstcomponent (props:IAppProps) {
   return (
     <div>
-      <h1>My first component here with typescript</h1>
-      <h4>adding more value inside all structure here!!</h4>
+      <h1>My first component here with typescript {props.name}</h1>
+  
     </div>
   );
 }
