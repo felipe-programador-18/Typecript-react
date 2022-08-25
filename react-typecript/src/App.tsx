@@ -3,7 +3,7 @@ import { Firstcomponent } from './Component/Firstcomponent';
 import { AnotherComponent } from './Component/anothercomponent';
 import './App.css';
 
-
+import { DoMore } from './Component/traningmore';
 import { TraninDesctruc }  from './Component/destructing'
 
 
@@ -49,7 +49,12 @@ const Increased = (t:number, v:number):number => {
 
     <TraninDesctruc commets='today I want traning little bit about graphql and typescript'  title='adding practice quite about typescript and react!!' age={2334234}  tags={['receive here more issues to need practice more and more always', 'on the other hand',
   'programmer Felipe Progammer Felipe']} />
-    
+
+    <DoMore name='Felipe Programmer' age={23} salary={20000} 
+    gender='M' email='programmerfloripa@outlook.com'
+    />
+
+
     </div>
   );
 }
