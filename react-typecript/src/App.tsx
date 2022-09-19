@@ -11,6 +11,9 @@ import AnotherState from './Component/interesting.state';
 import CreateMore from './Component/addingmoreprops';
 import AnotherApp from './Component/Statemore';
 import PracticeMore from './Component/context';
+import TraningMore from './Component/practicemore';
+import AnotherContext from './Component/AnotherContext';
+import ThrirdCode from './Component/ThirdComponent';
 
 
 
@@ -25,11 +28,23 @@ interface AddingContext{
  traning: number
 }
 
+interface AnoterContext{
+  agetwo: number
+  salary: number
+  cellphone: number
+}
+interface Employees{
+  work: string
+  email: string 
+  location: number
+
+}
+
 export const manageContext = createContext<AddingContext|null>(null)
+export const AddingOtherContext =createContext<AnoterContext| null>(null)
 
-
-
-
+export const LastDataHere =createContext<Employees|null>(null)
+ 
 
 function App() {
 let a:String = 'felipe'
@@ -69,12 +84,32 @@ const objectContext:AddingContext ={
 }
 
 
+const anotherDates:AnoterContext ={
+  agetwo:12,
+  cellphone:32332432,
+  salary:23231231
+} 
+
+
+const objectReceive:Employees={
+ work:'programmer',
+ email:'machadofelipe2016@outlook.com',
+ location:232323
+} 
 
 
   return (
     <manageContext.Provider  value={objectContext} > 
+     
+    <div> 
+    <AddingOtherContext.Provider value={anotherDates} >
+    
+    <LastDataHere.Provider value={objectReceive} >
+    <ThrirdCode/>
+                    
     <div className="App">
     <PracticeMore/>
+    <AnotherContext/>
 
     {receive && <p>Adding more testing here {receiveanother}</p>}
 
@@ -109,8 +144,14 @@ const objectContext:AddingContext ={
   
    <StateReact/>
 
+    
+    <TraningMore age={35} gender='m' name='Programmer Felipe'  />
     </div>
-     </manageContext.Provider>
+    
+    </LastDataHere.Provider>
+    </AddingOtherContext.Provider>
+    </div> 
+    </manageContext.Provider>
   );
 }
 

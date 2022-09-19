@@ -4,6 +4,7 @@ import { manageContext } from '../App';
 
 const PracticeMore  = () => {
   const details = useContext(manageContext)
+  console.log(details)
   return (
    <>
         {details && <p>
