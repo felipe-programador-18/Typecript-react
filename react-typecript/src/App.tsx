@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {createContext} from 'react';
 import { Firstcomponent } from './Component/Firstcomponent';
 import { AnotherComponent } from './Component/anothercomponent';
 import './App.css';
@@ -10,12 +10,25 @@ import StateReact from './Component/state.type';
 import AnotherState from './Component/interesting.state';
 import CreateMore from './Component/addingmoreprops';
 import AnotherApp from './Component/Statemore';
+import PracticeMore from './Component/context';
 
 
 
 
 //creating another code about type
 type AddingTest =  string | null
+
+
+interface AddingContext{
+ age: string
+ project: string
+ traning: number
+}
+
+export const manageContext = createContext<AddingContext|null>(null)
+
+
+
 
 
 function App() {
@@ -43,13 +56,26 @@ const Increased = (t:number, v:number):number => {
 // type with typescript
 
 //type
-
 const receive: AddingTest = 'adding testing here';
 let receiveanother:AddingTest = null;
 receiveanother ='adding another text here practice my freinds!!'
 
+
+
+const objectContext:AddingContext ={
+  age :"mrtins",
+  project:'adding mroe',
+  traning: 34
+}
+
+
+
+
   return (
+    <manageContext.Provider  value={objectContext} > 
     <div className="App">
+    <PracticeMore/>
+
     {receive && <p>Adding more testing here {receiveanother}</p>}
 
      <CreateMore age={232323}  name='Programmer Felipe Floripa' children={[12]}  />
@@ -84,6 +110,7 @@ receiveanother ='adding another text here practice my freinds!!'
    <StateReact/>
 
     </div>
+     </manageContext.Provider>
   );
 }
 
