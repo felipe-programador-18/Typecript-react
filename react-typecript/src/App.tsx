@@ -14,6 +14,7 @@ import PracticeMore from './Component/context';
 import TraningMore from './Component/practicemore';
 import AnotherContext from './Component/AnotherContext';
 import ThrirdCode from './Component/ThirdComponent';
+import { PracticeLittle } from './Component/practice';
 
 
 
@@ -151,6 +152,10 @@ const objectReceive:Employees={
     </LastDataHere.Provider>
     </AddingOtherContext.Provider>
     </div> 
+    <PracticeLittle
+     name='Felipe Martins'
+     email='machadofelipe@2016@outlook.com'
+     age={27} />
     </manageContext.Provider>
   );
 }
