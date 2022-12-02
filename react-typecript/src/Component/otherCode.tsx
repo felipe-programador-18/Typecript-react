@@ -12,8 +12,10 @@ export const TreatedCode = ()  =>{
     return (
     <div>
 
-        <input type="text" onChange={HandleForm} />
-         {test}
+        <input type="text" 
+          placeholder='testing my input!!' 
+          onChange={HandleForm} />
+        Testing More  {test}
     </div>
   );
 }
