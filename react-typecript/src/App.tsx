@@ -16,6 +16,7 @@ import AnotherContext from './Component/AnotherContext';
 import ThrirdCode from './Component/ThirdComponent';
 import { PracticeLittle } from './Component/practice';
 import { Cadastre } from './Component/morePractice';
+import { TreatedCode } from './Component/otherCode';
 
 
 
@@ -163,6 +164,8 @@ const objectReceive:Employees={
        age={27} 
        gender='M' 
        email='machadofelipe2016@outlook.com' />
+
+       <TreatedCode/>
     </manageContext.Provider>
   );
 }
