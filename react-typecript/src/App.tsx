@@ -15,6 +15,7 @@ import TraningMore from './Component/practicemore';
 import AnotherContext from './Component/AnotherContext';
 import ThrirdCode from './Component/ThirdComponent';
 import { PracticeLittle } from './Component/practice';
+import { Cadastre } from './Component/morePractice';
 
 
 
@@ -156,6 +157,12 @@ const objectReceive:Employees={
      name='Felipe Martins'
      email='machadofelipe@2016@outlook.com'
      age={27} />
+
+     <Cadastre 
+       name={'Felipe18'} 
+       age={27} 
+       gender='M' 
+       email='machadofelipe2016@outlook.com' />
     </manageContext.Provider>
   );
 }
