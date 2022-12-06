@@ -40,14 +40,20 @@ interface Employees{
   work: string
   email: string 
   location: number
-
 }
+
+interface TestingMore{
+  adress: string
+  location:string
+  cellPhone: number
+}
+
 
 export const manageContext = createContext<AddingContext|null>(null)
 export const AddingOtherContext =createContext<AnoterContext| null>(null)
 
 export const LastDataHere =createContext<Employees|null>(null)
- 
+export const OtherContext = createContext<TestingMore|null>(null) 
 
 function App() {
 let a:String = 'felipe'
@@ -65,11 +71,15 @@ const Presentation = (phase:string): string =>{
 }
 
 let v: number =323
-let t:number =323
+let t:number =32666
 
 const Increased = (t:number, v:number):number => {
   return t*v
 }
+
+const OtherCounter = (t:number,v:number):number => {
+  return t-v
+} 
 
 // type with typescript
 
@@ -101,6 +111,13 @@ const objectReceive:Employees={
 } 
 
 
+const assistMent:TestingMore ={
+  adress:"avenida Circular",
+  location:"brazil",
+  cellPhone:989530193
+}
+
+
   return (
     <manageContext.Provider  value={objectContext} > 
      
@@ -109,6 +126,9 @@ const objectReceive:Employees={
     
     <LastDataHere.Provider value={objectReceive} >
     <ThrirdCode/>
+    <OtherContext.Provider value={assistMent} >
+    
+  
                     
     <div className="App">
     <PracticeMore/>
@@ -124,6 +144,7 @@ const objectReceive:Employees={
     </h1>
     <AnotherState/>
      <p>My sum is !! {Increased(t,v)} </p>
+     <p>my Another sum is{OtherCounter(t,v)}</p>
      <p>{Greetings(a)}</p> 
       
      <h1> {Presentation(phase)} </h1>
@@ -150,7 +171,7 @@ const objectReceive:Employees={
     
     <TraningMore age={35} gender='m' name='Programmer Felipe'  />
     </div>
-    
+    </OtherContext.Provider>
     </LastDataHere.Provider>
     </AddingOtherContext.Provider>
     </div> 
