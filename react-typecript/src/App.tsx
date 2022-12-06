@@ -96,13 +96,11 @@ const objectContext:AddingContext ={
   traning: 34
 }
 
-
 const anotherDates:AnoterContext ={
   agetwo:12,
   cellphone:32332432,
   salary:23231231
 } 
-
 
 const objectReceive:Employees={
  work:'programmer',
@@ -110,8 +108,7 @@ const objectReceive:Employees={
  location:232323
 } 
 
-
-const assistMent:TestingMore ={
+const assistMenting:TestingMore={
   adress:"avenida Circular",
   location:"brazil",
   cellPhone:989530193
@@ -125,8 +122,8 @@ const assistMent:TestingMore ={
     <AddingOtherContext.Provider value={anotherDates} >
     
     <LastDataHere.Provider value={objectReceive} >
+    <OtherContext.Provider value={assistMenting} >
     <ThrirdCode/>
-    <OtherContext.Provider value={assistMent} >
     
   
                     
