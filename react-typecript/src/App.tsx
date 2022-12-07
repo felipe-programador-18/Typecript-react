@@ -70,6 +70,12 @@ const Presentation = (phase:string): string =>{
   return `i need training more about typescript with graphql ${phase}`
 }
 
+const anotherPhase:string ='make some testing into application'
+
+const AddTesting = (anotherPhase:string): string =>{
+  return `adding another phase here in this case to fixed here ${anotherPhase}`
+}
+
 let v: number =323
 let t:number =32666
 
@@ -145,7 +151,7 @@ const assistMenting:TestingMore={
      <p>{Greetings(a)}</p> 
       
      <h1> {Presentation(phase)} </h1>
-
+     <h2>{AddTesting(anotherPhase)}</h2>
 
     <AnotherComponent/>
     {working && <p> trabalhando</p> }
