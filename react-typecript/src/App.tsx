@@ -17,7 +17,7 @@ import ThrirdCode from './Component/ThirdComponent';
 import { PracticeLittle } from './Component/practice';
 import { Cadastre } from './Component/morePractice';
 import { TreatedCode } from './Component/otherCode';
-import { PracticeMoreAndMore } from './Component/handsonType';
+import { Nickname, PracticeMoreAndMore } from './Component/handsonType';
 
 
 
@@ -150,6 +150,7 @@ const assistMenting:TestingMore={
      name={'felipe Martins Programmer'}
      age={28}
      arrys={[12,3,43,23,123,5435,123,34234]}
+     sobrenome={Nickname.nameTwo}
       />
 
     <h1>Practice a bit more today {PartMore(f,g)}</h1>

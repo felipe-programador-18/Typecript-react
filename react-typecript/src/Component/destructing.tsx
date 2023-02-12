@@ -11,7 +11,7 @@ export interface AnotherInter{
 }
 
 export enum Category {
-  JS = 'adding enum here interest functionality',
+  JS ='adding enum here interest functionality',
   TS ='Typescript is very good',
   P ="python"
 }
