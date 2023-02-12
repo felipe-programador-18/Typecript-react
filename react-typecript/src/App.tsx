@@ -17,6 +17,7 @@ import ThrirdCode from './Component/ThirdComponent';
 import { PracticeLittle } from './Component/practice';
 import { Cadastre } from './Component/morePractice';
 import { TreatedCode } from './Component/otherCode';
+import { PracticeMoreAndMore } from './Component/handsonType';
 
 
 
@@ -24,7 +25,7 @@ import { TreatedCode } from './Component/otherCode';
 //creating another code about type
 type AddingTest =  string | null
 
-
+// put on hands the act Maneee Typescript
 interface AddingContext{
  age: string
  project: string
@@ -63,6 +64,14 @@ const working :Boolean = true
 const Greetings = (a:String): String => {
    return `name is ${a}`
 }
+
+let f:number =5435
+let g:number=7567
+
+const PartMore = (f:number, g:number) => {
+  return f*g
+}
+
 
 const phase:string ='I am fullstack developer react node typescript and who know in the future i study about ruby on ralls  '
 
@@ -136,6 +145,14 @@ const assistMenting:TestingMore={
     <div className="App">
     <PracticeMore/>
     <AnotherContext/>
+   
+    <PracticeMoreAndMore
+     name={'felipe Martins Programmer'}
+     age={28}
+     arrys={[12,3,43,23,123,5435,123,34234]}
+      />
+
+    <h1>Practice a bit more today {PartMore(f,g)}</h1>
 
     {receive && <p>Adding more testing here {receiveanother}</p>}
 
