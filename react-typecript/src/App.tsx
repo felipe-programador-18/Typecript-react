@@ -18,6 +18,7 @@ import { PracticeLittle } from './Component/practice';
 import { Cadastre } from './Component/morePractice';
 import { TreatedCode } from './Component/otherCode';
 import { Nickname, PracticeMoreAndMore } from './Component/handsonType';
+import { FatherRc } from './Component/ToPracticeMore';
 
 
 
@@ -139,6 +140,10 @@ const assistMenting:TestingMore={
     <LastDataHere.Provider value={objectReceive} >
     <OtherContext.Provider value={assistMenting} >
     <ThrirdCode/>
+
+    <FatherRc name='Felipe programmer' age={32} nickname='software floripa' >
+    
+    </FatherRc>
     
   
                     
